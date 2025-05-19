@@ -10,3 +10,4 @@ Src
 - `img`：图片文件夹。
 - `html`：HTML文件夹。
 - `css`：CSS样式文件。
+- `js`：JavaScript文件。
