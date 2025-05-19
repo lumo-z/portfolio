@@ -65,8 +65,6 @@ let currentSlide = 0;
             alert('没有找到匹配的商品，请尝试其他关键词。');
         }
     }
-
-    // 回车键搜索
     document.getElementById('search-input').addEventListener('keyup', function(event) {
         if (event.key === 'Enter') {
             performSearch();
