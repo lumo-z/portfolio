@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>注册界面组件</title>
+    <link rel="stylesheet" href="./styles/弹出注册.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>欢迎加入我们</h1>
+      <p class="subtitle">创建一个账户，解锁所有功能</p>
+
+      <div class="features">
+        <div class="feature-card">
+          <i>🔒</i>
+          <h3>安全可靠</h3>
+          <p>银行级加密保护您的数据安全</p>
+        </div>
+
+        <div class="feature-card">
+          <i>🚀</i>
+          <h3>极速体验</h3>
+          <p>流畅操作体验，响应迅速</p>
+        </div>
+
+        <div class="feature-card">
+          <i>💡</i>
+          <h3>智能功能</h3>
+          <p>AI辅助功能提升工作效率</p>
+        </div>
+      </div>
+
+      <button id="openDialogBtn" class="btn">立即注册</button>
+
+      <div class="success-message" id="successMessage">
+        注册成功！欢迎加入我们的社区
+      </div>
+    </div>
+
+    <!-- Registration Dialog -->
+    <div class="dialog-overlay" id="registrationDialog">
+      <div class="dialog">
+        <div class="dialog-header">
+          <h2 class="dialog-title">创建账户</h2>
+          <button class="close-btn" id="closeRegistrationDialog">
+            &times;
+          </button>
+        </div>
+
+        <form id="registrationForm">
+          <div class="form-group">
+            <label for="email">电子邮箱 *</label>
+            <div class="input-wrapper">
+              <input type="email" id="email" placeholder="输入您的邮箱" />
+            </div>
+            <div class="error-message" id="emailError">
+              请输入有效的邮箱地址
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password">密码 *</label>
+            <div class="input-wrapper">
+              <input
+                type="password"
+                id="password"
+                placeholder="2-12位数字字母组合"
+              />
+            </div>
+            <div class="password-strength">
+              <div class="strength-meter" id="strengthMeter"></div>
+            </div>
+            <div class="password-requirements">
+              密码要求：长度2-12位，必须包含字母和数字
+            </div>
+            <div class="error-message" id="passwordError">
+              密码必须为2-12位数字字母组合
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="confirmPassword">确认密码 *</label>
+            <div class="input-wrapper">
+              <input
+                type="password"
+                id="confirmPassword"
+                placeholder="再次输入密码"
+              />
+            </div>
+            <div class="error-message" id="confirmPasswordError">
+              两次输入的密码不一致
+            </div>
+          </div>
+
+          <div class="dialog-footer">
+            <button type="button" class="secondary-btn" id="cancelRegistration">
+              取消
+            </button>
+            <button
+              type="submit"
+              class="primary-btn"
+              id="submitRegistration"
+              disabled
+            >
+              注册
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Confirmation Dialog -->
+    <div class="dialog-overlay" id="confirmationDialog">
+      <div class="dialog">
+        <div class="confirmation-dialog">
+          <div class="confirmation-icon">❓</div>
+          <h2 class="dialog-title">确认注册</h2>
+          <p class="confirmation-text">
+            您确定要使用此邮箱<br /><span id="confirmEmail"></span
+            ><br />创建账户吗？
+          </p>
+
+          <div class="dialog-footer" style="justify-content: center">
+            <button type="button" class="secondary-btn" id="cancelConfirmation">
+              取消
+            </button>
+            <button type="button" class="primary-btn" id="confirmRegistration">
+              确认注册
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/弹出注册.js"></script>
+  </body>
+</html>

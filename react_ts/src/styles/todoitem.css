@@ -1,0 +1,13 @@
+li {
+  list-style: none;
+  padding: 10px;
+  background-color: #f4f4f4;
+  margin: 5px;
+  border-radius: 5px;
+}
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
